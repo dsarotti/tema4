@@ -9,8 +9,6 @@ public class Numeros {
         listaNums = input;
     }
 
-
-
     public int longitud() {
         return listaNums.length;
     }
@@ -57,6 +55,7 @@ public class Numeros {
             res = temp[temp.length / 2];
         return res;
     }
+
     // Ejercicio 2
     public int[] getOrdenado() {
 
@@ -64,7 +63,7 @@ public class Numeros {
         Arrays.sort(temp);
         return temp;
     }
-    
+
     // Ejercicio 2
     public int[] getPares() {
         int[] temp;
@@ -103,5 +102,40 @@ public class Numeros {
             }
         }
         return temp;
+    }
+
+    public int cuentaPrimos() {
+        int contador = 0;
+
+        for (int i = 0; i < listaNums.length; i++) {
+            if (esPrimo(listaNums[i])) {
+                contador++;
+            }
+        }
+        return contador;
+    }
+
+    public boolean esPrimo(int n) {
+        boolean res = true;
+        if (n != 0 && n != 1) {
+            for (int i = n; i > 1 || res; i--) {
+                if (n % i == 0)
+                    res = false;
+            }
+        }
+        return res;
+    }
+
+    public int[] getPrimos(){
+        int longitud = cuentaPrimos();
+        int[] res = new int[longitud];
+        int contador = 0;
+        for (int i = 0; i<listaNums.length;i++){
+            if (esPrimo(listaNums[i])){
+                res[contador]=listaNums[i];
+                contador++;
+            }
+        }
+        return res;
     }
 }
