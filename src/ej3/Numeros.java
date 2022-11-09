@@ -1,4 +1,4 @@
-package ej1;
+package ej3;
 
 import java.util.Arrays;
 
@@ -8,6 +8,8 @@ public class Numeros {
     public void setNumeros(int[] input) {
         listaNums = input;
     }
+
+
 
     public int longitud() {
         return listaNums.length;
@@ -55,5 +57,51 @@ public class Numeros {
             res = temp[temp.length / 2];
         return res;
     }
+    // Ejercicio 2
+    public int[] getOrdenado() {
 
+        int[] temp = listaNums.clone();
+        Arrays.sort(temp);
+        return temp;
+    }
+    
+    // Ejercicio 2
+    public int[] getPares() {
+        int[] temp;
+        int n = 0;
+        int contador = 0;
+        for (int i = 0; i < listaNums.length; i++) {
+            if (listaNums[i] % 2 == 0) {
+                contador++;
+            }
+        }
+        temp = new int[contador];
+        for (int i = 0; i < listaNums.length; i++) {
+            if (listaNums[i] % 2 == 0) {
+                temp[n] = listaNums[i];
+                n++;
+            }
+        }
+        return temp;
+    }
+
+    // Ejercicio 2
+    public int[] getImpares() {
+        int[] temp;
+        int n = 0;
+        int contador = 0;
+        for (int i = 0; i < listaNums.length; i++) {
+            if (listaNums[i] % 2 != 0) {
+                contador++;
+            }
+        }
+        temp = new int[contador];
+        for (int i = 0; i < listaNums.length; i++) {
+            if (listaNums[i] % 2 != 0) {
+                temp[n] = listaNums[i];
+                n++;
+            }
+        }
+        return temp;
+    }
 }
