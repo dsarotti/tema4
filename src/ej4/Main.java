@@ -24,26 +24,27 @@ public class Main {
 
         System.out.println("----------Inserciones--------");
         //
+        System.out.println("-----------------------------------------------");
         System.out.println("pos 0, valor 69: ");
         obj1.insertarPos(69, 0);
         System.out.println("Resultado: " + Arrays.toString(obj1.getNumeros()));
         //
-        
+        System.out.println("-----------------------------------------------");
         //
         System.out.println("pos 1, valor 96: ");
         obj1.insertarPos(96, 1);
         System.out.println("Resultado: " + Arrays.toString(obj1.getNumeros()));
         //
-        
+        System.out.println("-----------------------------------------------");
         //
         System.out.println("pos 0, valor 1: ");
         obj1.insertarPos(1, 0);
         System.out.println("Resultado: " + Arrays.toString(obj1.getNumeros()));
         //     
-        
+        System.out.println("-----------------------------------------------");
        //
-        System.out.println("pos 12, valor 12: ");
-        obj1.insertarPos(13, 14);
+        System.out.println("pos 13, valor 45: ");
+        obj1.insertarPos(45, 13);
         System.out.println("Resultado: " + Arrays.toString(obj1.getNumeros()));
         //  
         
