@@ -8,9 +8,9 @@ public class Main {
         Numeros obj2 = new Numeros();
         Numeros obj3 = new Numeros();
         Numeros obj4 = new Numeros();
-        int[] test={0,1,2,3,4,5,6,7,8,9};
+        //int[] test={0,1,2,3,4,5,6,7,8,9};
 
-        obj1.setNumeros(test);
+        //obj1.setNumeros(test);
         System.out.println("Longitud: " + obj1.longitud());
         System.out.println("Mayor: " + obj1.mayor());
         System.out.println("Menor: " + obj1.menor());
@@ -25,28 +25,53 @@ public class Main {
         System.out.println("----------Inserciones--------");
         //
         System.out.println("-----------------------------------------------");
-        System.out.println("pos 0, valor 69: ");
-        obj1.insertarPos(69, 0);
+        System.out.println("pos 0, valor 9: ");
+        obj1.insertarPos(9, 0);
         System.out.println("Resultado: " + Arrays.toString(obj1.getNumeros()));
+        System.out.println("            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20");
         //
         System.out.println("-----------------------------------------------");
         //
-        System.out.println("pos 1, valor 96: ");
-        obj1.insertarPos(96, 1);
+        System.out.println("pos 1, valor 6: ");
+        obj1.insertarPos(6, 1);
         System.out.println("Resultado: " + Arrays.toString(obj1.getNumeros()));
+        System.out.println("            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20");
         //
         System.out.println("-----------------------------------------------");
         //
         System.out.println("pos 0, valor 1: ");
         obj1.insertarPos(1, 0);
         System.out.println("Resultado: " + Arrays.toString(obj1.getNumeros()));
+        System.out.println("            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20");
         //     
         System.out.println("-----------------------------------------------");
        //
-        System.out.println("pos 13, valor 45: ");
-        obj1.insertarPos(45, 13);
+        System.out.println("pos 13, valor 5: ");
+        obj1.insertarPos(5, 13);
         System.out.println("Resultado: " + Arrays.toString(obj1.getNumeros()));
-        //  
+        System.out.println("            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20");
+        //--------------------------------------------------------------------------------------------------------------------
+        System.out.println("-----------------------------------------------");
+        //
+        System.out.println("Principio: valor 8");
+        obj1.insertarPrincipio(8);        
+        System.out.println("Resultado: " + Arrays.toString(obj1.getNumeros()));
+        System.out.println("            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20");
+        //
+        System.out.println("-----------------------------------------------");
+        //
+        System.out.println("Principio: valor 3");
+        obj1.insertarPrincipio(3);        
+        System.out.println("Resultado: " + Arrays.toString(obj1.getNumeros()));
+        System.out.println("            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20");
+        //
+        System.out.println("-----------------------------------------------");
+        //
+        System.out.println("Final: valor 0");
+        obj1.insertarFinal(0);
+        System.out.println("Resultado: " + Arrays.toString(obj1.getNumeros()));
+        System.out.println("            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20");
+
         
     }
     

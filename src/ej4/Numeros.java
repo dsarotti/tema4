@@ -3,7 +3,7 @@ package ej4;
 import java.util.Arrays;
 
 public class Numeros {
-    private int[] listaNums;
+    private int[] listaNums = new int[0];
 
     public void setNumeros(int[] input) {
         listaNums = input;
@@ -164,18 +164,20 @@ public class Numeros {
     }
 
     public void insertarPrincipio(int num) {
-        int[] temp = new int[listaNums.length + 1];
+        /*int[] temp = new int[listaNums.length + 1];
         temp[0] = num;
         for (int i = 0; i < listaNums.length; i++) {
             temp[i + 1] = listaNums[i];
         }
-        listaNums = temp.clone();
+        listaNums = temp.clone();*/
+        insertarPos(num,0);
     }
 
     public void insertarFinal(int num) {
-        int[] temp = Arrays.copyOf(listaNums, listaNums.length + 1);
+        /*int[] temp = Arrays.copyOf(listaNums, listaNums.length + 1);
         temp[temp.length - 1] = num;
-        listaNums = temp.clone();
+        listaNums = temp.clone();*/
+        insertarPos(num,listaNums.length);
     }
 
     public void eliminarPos(int pos) {
