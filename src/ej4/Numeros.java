@@ -9,6 +9,10 @@ public class Numeros {
         listaNums = input;
     }
 
+    public int[] getNumeros(){
+        return listaNums;
+    }
+
     public int longitud() {
         return listaNums.length;
     }
@@ -118,7 +122,7 @@ public class Numeros {
     public boolean esPrimo(int n) {
         boolean res = true;
         if (n != 0 && n != 1) {
-            for (int i = n; i > 1 || res; i--) {
+            for (int i = n-1; i > 1 && res; i--) {
                 if (n % i == 0)
                     res = false;
             }
@@ -140,21 +144,60 @@ public class Numeros {
     }
 
     public void insertarPos(int num, int pos) {
-        // opt == true > por el principio
-        // opt == false > por el final
-        // pos > posición en la que insertar
+        //si se inserta en una posición mayor que listaNums.length, las posiciones intermedias se inicializan a 0;
+
         int[] temp;
-        int t;
         if (pos >= listaNums.length) {
             temp = Arrays.copyOf(listaNums, pos + 1);
             temp[pos] = num;
         } else {
-            temp = new int[listaNums.length+1];
+            temp = new int[listaNums.length + 1];
             for (int i = 0; i < pos; i++) {
                 temp[i] = listaNums[i];
             }
-            temp[pos]=num;
-            
+            temp[pos] = num;
+            for (int i = pos; i < listaNums.length; i++) {
+                temp[i+1] = listaNums[i];
+            }
         }
+        listaNums = temp.clone();
+    }
+
+    public void insertarPrincipio(int num) {
+        int[] temp = new int[listaNums.length + 1];
+        temp[0] = num;
+        for (int i = 0; i < listaNums.length; i++) {
+            temp[i + 1] = listaNums[i];
+        }
+        listaNums = temp.clone();
+    }
+
+    public void insertarFinal(int num) {
+        int[] temp = Arrays.copyOf(listaNums, listaNums.length + 1);
+        temp[temp.length - 1] = num;
+        listaNums = temp.clone();
+    }
+
+    public void eliminarPos(int pos) {
+        if (pos == listaNums.length - 1) {
+            listaNums = Arrays.copyOf(listaNums, pos);
+        } else {
+            int[] temp = new int[listaNums.length - 1];
+            for (int i = 0; i < pos; i++) {
+                temp[i] = listaNums[i];
+            }
+            for (int i = pos + 1; i < listaNums.length; i++) {
+                temp[i - 1] = listaNums[i];
+            }
+            listaNums = temp.clone();
+        }
+    }
+
+    public void eliminarPrincipio(){
+        eliminarPos(0);
+    }
+
+    public void eliminarFinal(){
+        eliminarPos((listaNums.length-1));
     }
 }
