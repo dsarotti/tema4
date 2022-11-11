@@ -137,6 +137,7 @@ public class Main {
         //
         System.out.println("-----------------------------------------------");
         System.out.println("--------EL OBJETO ESTA VACIO, INSERTANDO UN ELEMENTO EN pos 0----------");
+        System.out.println("insertarPrincipio(0)");
         obj2.insertarPrincipio(0);
         System.out.println("Resultado: " + Arrays.toString(obj2.getNumeros()));
         System.out.println("            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20");
@@ -154,19 +155,21 @@ public class Main {
         System.out.println("            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20");
         //
         System.out.println("-----------------------------------------------");
-        //
-        System.out.println("-----------------------------------------------");
-        System.out.println("eliminarPos(1)");
-        obj2.eliminarPos(0);
+        System.out.println("eliminarPos(0)");
+        obj2.eliminarPrincipio();
         System.out.println("Resultado: " + Arrays.toString(obj2.getNumeros()));
         System.out.println("            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20");
         //
         System.out.println("-----------------------------------------------");
-
+        //
         System.out.println("getNumeros lista vacia> " + Arrays.toString(obj3.getNumeros()));
-
-
-
-
+        //
+        System.out.println("-----------------------------------------------");
+        System.out.println("--------EL OBJETO ESTA VACIO, INSERTANDO UN ELEMENTO EN pos 0----------");
+        System.out.println("insertarFinal(0)");
+        obj2.insertarFinal(0);
+        System.out.println("Resultado: " + Arrays.toString(obj2.getNumeros()));
+        System.out.println("            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20");
+        //
     }
 }

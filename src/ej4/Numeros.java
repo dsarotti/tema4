@@ -10,12 +10,14 @@ public class Numeros {
     }
 
     public int[] getNumeros(){
-        int[] t = new int[1];
-        t[0]=1;
+        /* int[] t = new int[1];
+        t[0]=0;
         if (listaNums.length!=0){
             t = listaNums.clone();
         }
         return t;
+        */
+        return listaNums;
     }
 
     public int longitud() {
