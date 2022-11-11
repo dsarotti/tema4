@@ -10,7 +10,12 @@ public class Numeros {
     }
 
     public int[] getNumeros(){
-        return listaNums;
+        int[] t = new int[1];
+        t[0]=1;
+        if (listaNums.length!=0){
+            t = listaNums.clone();
+        }
+        return t;
     }
 
     public int longitud() {
@@ -170,6 +175,7 @@ public class Numeros {
             temp[i + 1] = listaNums[i];
         }
         listaNums = temp.clone();*/
+        
         insertarPos(num,0);
     }
 
