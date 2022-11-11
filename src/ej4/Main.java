@@ -155,7 +155,7 @@ public class Main {
         System.out.println("            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20");
         //
         System.out.println("-----------------------------------------------");
-        System.out.println("eliminarPos(0)");
+        System.out.println("eliminarPrincipio(0)");
         obj2.eliminarPrincipio();
         System.out.println("Resultado: " + Arrays.toString(obj2.getNumeros()));
         System.out.println("            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20");
