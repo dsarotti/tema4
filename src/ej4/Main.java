@@ -91,8 +91,7 @@ public class Main {
         // //
         // System.out.println("-----------------------------------------------");
         // //
-        // System.out.println(" TEST 2º OBJETO: ARRAY INICIAL DE 2 POSICIONES. ARRAY
-        // INICIAL: {0,1}");
+        // System.out.println(" TEST 2º OBJETO: ARRAY INICIAL DE 2 POSICIONES. ARRAY INICIAL: {0,1}");
         // //
         // System.out.println("-----------------------------------------------");
         // //
@@ -138,8 +137,7 @@ public class Main {
         // System.out.println(" 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10");
         // //
         // System.out.println("-----------------------------------------------");
-        // System.out.println("--------EL OBJETO ESTA VACIO, INSERTANDO UN ELEMENTO EN
-        // pos 0----------");
+        // System.out.println("--------EL OBJETO ESTA VACIO, INSERTANDO UN ELEMENTO EN pos 0----------");
         // System.out.println("insertarPrincipio(0)");
         // obj2.insertarPrincipio(0);
         // System.out.println("Resultado: " + Arrays.toString(obj2.getNumeros()));
@@ -169,8 +167,7 @@ public class Main {
         // Arrays.toString(obj3.getNumeros()));
         // //
         // System.out.println("-----------------------------------------------");
-        // System.out.println("--------EL OBJETO ESTA VACIO, INSERTANDO UN ELEMENTO EN
-        // pos 0----------");
+        // System.out.println("--------EL OBJETO ESTA VACIO, INSERTANDO UN ELEMENTO EN pos 0----------");
         // System.out.println("insertarFinal(0)");
         // obj2.insertarFinal(0);
         // System.out.println("Resultado: " + Arrays.toString(obj2.getNumeros()));
