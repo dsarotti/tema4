@@ -3,14 +3,19 @@ package ej4;
 import java.util.Arrays;
 
 public class Numeros {
-    private int[] listaNums;
+    private int[] listaNums = new int[0];
 
     public void setNumeros(int[] input) {
         listaNums = input;
     }
 
     public int[] getNumeros(){
-        return listaNums;
+        int[] t = new int[1];
+        t[0]=1;
+        if (listaNums.length!=0){
+            t = listaNums.clone();
+        }
+        return t;
     }
 
     public int longitud() {
@@ -37,8 +42,8 @@ public class Numeros {
         return t;
     }
 
-    public int media() {
-        int t = 0;
+    public float media() {
+        float t = 0;
         for (int i = 0; i < listaNums.length; i++) {
             t = t + listaNums[i];
         }
@@ -49,14 +54,15 @@ public class Numeros {
         }
     }
 
-    public int mediana() {
+    public float mediana() {
         int[] temp = listaNums.clone();
         Arrays.sort(temp);
-        int res;
+        float res;
         if (temp.length % 2 == 0) {
-            res = (temp[(temp.length / 2)] + temp[(temp.length / 2) - 1]) / 2;
-        } else
+            res = (temp[(temp.length / 2)] + temp[((temp.length / 2) - 1)]) / 2;
+        } else{
             res = temp[temp.length / 2];
+        }
         return res;
     }
 
@@ -131,8 +137,7 @@ public class Numeros {
     }
 
     public int[] getPrimos() {
-        int longitud = cuentaPrimos();
-        int[] res = new int[longitud];
+        int[] res = new int[cuentaPrimos()];
         int contador = 0;
         for (int i = 0; i < listaNums.length; i++) {
             if (esPrimo(listaNums[i])) {
@@ -164,18 +169,21 @@ public class Numeros {
     }
 
     public void insertarPrincipio(int num) {
-        int[] temp = new int[listaNums.length + 1];
+        /*int[] temp = new int[listaNums.length + 1];
         temp[0] = num;
         for (int i = 0; i < listaNums.length; i++) {
             temp[i + 1] = listaNums[i];
         }
-        listaNums = temp.clone();
+        listaNums = temp.clone();*/
+        
+        insertarPos(num,0);
     }
 
     public void insertarFinal(int num) {
-        int[] temp = Arrays.copyOf(listaNums, listaNums.length + 1);
+        /*int[] temp = Arrays.copyOf(listaNums, listaNums.length + 1);
         temp[temp.length - 1] = num;
-        listaNums = temp.clone();
+        listaNums = temp.clone();*/
+        insertarPos(num,listaNums.length);
     }
 
     public void eliminarPos(int pos) {
